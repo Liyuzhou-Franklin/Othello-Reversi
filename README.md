@@ -2,9 +2,9 @@
 A platform for playing Reversi between two human players.
 
 Java concepts used:
-1. 2D Array
-2. Java Collections
-3. File I/O
+1. 2D Array: To model the Othello game board.
+2. Java Collections: Set is used to keep track of the valid moves of both players; List is used to keep track of the history of the moves.
+3. File I/O: The state of the game is written to the gameState file during the game. The information stored include the disc distribution on the game board, the historical moves, the valid next moves for both players, the number of black and white disks, and who the next player is. This allows players to resume the previous game even if the game window was closed.
 4. JUnit Testable Component
 
 Design model: Model-View-Controller.
