@@ -1,22 +1,19 @@
 # Othello-Reversi
-A platform for playing Reversi between two human players
+A platform for playing Reversi between two human players.
 
 ========================
 =: Core Concepts Used :=
 ========================
 
   1. 2D Array
-        I model the Othello game board with a 8*8 2D array. The values stored in
+        The Othello game board is modelled with a 8*8 2D array. The values stored in
         the 2D array (except for the center 4 blocks) will initially be 0. This is
-        done in the reset() function. If a black disk appears on the board, I set
-        the value of the corresponding entry in the 2D array to 1, as well as change
-        the flipped disks' corresponding entries from 2 to 1. Similar if a white disk
-        appears on the board. Using integers to represent colors is clean and precise,
-        though I could also create an enumeration of colors. I use for loops and while
-        loops to iterate through all or a part of the elements in the array. It is
-        appropriate to use 2D array because we do not need to resize the game board.
+        done in the reset() function. If a black disk appears on the board, the value
+        of the corresponding entry in the 2D array is set to 1, and the flipped disks'
+        corresponding entries are changed from 2 to 1. Similar if a white disk appears
+        on the board.
 
-  2. Java Collections
+  3. Java Collections
         I use the Set in Java Collections to keep track of the valid moves (empty cells
         with flippable opponents' disks next to it) of the two players. blackValidMove
         records the valid moves for the black player; whiteValidMove records the valid
@@ -38,7 +35,7 @@ A platform for playing Reversi between two human players
         List is justified because the order of the historical moves does matter. Again, I
         need to modify these moves, so an array is unhandy.
 
-  3. File I/O
+  4. File I/O
         File I/O is implemented in my Othello class. I write the state of the game to the
         gameState file using File I/O. It stores all the status of the game, including the
         game board, the historical moves, the valid next moves for both players, the number
@@ -49,21 +46,13 @@ A platform for playing Reversi between two human players
         that at the end of last game. The historical moves and valid moves will also be
         resumed in the internal state of the game.
 
-  4. JUnit Testable Component
+  5. JUnit Testable Component
         Othello's game logic is unit-testable. I tested three game logic: flipping disks,
         checking winner, and checking if the move is valid. I wrote a total of 18 tests.
         They include edge cases and normal cases. I checked that no two tests examine the
         same thing. There is always a possibility that one of my test does not pass while
         others do.
 
-===============================
-=: File Structure Screenshot :=
-===============================
-
-- Include a screenshot of your project's file structure. This should include
-  all of the files in your project, and the folders they are in. You can
-  upload this screenshot in your homework submission to gradescope, named
-  "file_structure.png".
 
 =========================
 =: Your Implementation :=
